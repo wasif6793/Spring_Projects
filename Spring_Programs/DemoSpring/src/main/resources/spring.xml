@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dev" class="org.wasif.Dev">
+
+        <!-- <property name="age" value="12" />  used to change the value of age-->
+        <!-- <constructor-arg name="age" value="14" />  same as above function-->
+        <!--        <property name="laptop" ref="lap1" /> used to refer the laptop class by lap1-->
+        <!--        <constructor-arg ref="lap1" /> dircet referring-->
+        <!--        <property name="comp" ref="lap1" />-->
+    </bean>
+    <bean id="comp" class="org.wasif.Laptop">
+    </bean>
+    <bean id="desk1" class="org.wasif.Desktop">
+    </bean>
+
+    <bean id="dev1" class="org.wasif.Dev" autowire="byName">
+        <property name="comp" ref="desk1"/>
+    </bean>
+
+
+    <bean id="laptop" class="org.wasif.Laptop">
+    </bean>
+
+    <bean id="lap1" class="org.wasif.Laptop">
+    </bean>
+</beans>
