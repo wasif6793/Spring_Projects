@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: ticketService
+
+eureka:
+  instance:
+    prefer-ip-address: true  # Use the IP address rather than the hostname for registration
+  client:
+    fetch-registry: true  # Enable fetching the registry information from Eureka
+    register-with-eureka: true  # Enable this service to register itself with Eureka
+    service-url:
+      defaultZone: http://localhost:8999/eureka  # The URL of the Eureka server
+
+
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8999/eureka
